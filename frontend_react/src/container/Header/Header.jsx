@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+import { AppWrap } from '../../wrapper';
 import { images } from '../../constants';
 
 import './Header.scss';
@@ -18,7 +19,7 @@ const scaleVariants = {
 
 const Header = () => {
   return (
-    <div id="home" className="app__header app__flex">
+    <div className="app__header app__flex">
       <motion.div
       // whileInView, a transition, to animate to when the element is in view.
       // opacity from completely invisible to completely visible
@@ -75,4 +76,4 @@ const Header = () => {
   );
 }
 
-export default Header;
+export default AppWrap(Header, 'home');
